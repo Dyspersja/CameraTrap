@@ -292,6 +292,10 @@ void getCameraStatus(AsyncWebServerRequest *request){
     static char json_response[1024];
 
     sensor_t * s = esp_camera_sensor_get();
+    if(s == NULL){
+        request->send(501);
+        return;
+    }
     char * p = json_response;
     *p++ = '{';
 
@@ -339,10 +343,13 @@ void setCameraVar(AsyncWebServerRequest *request){
     int val = atoi(request->arg("val").c_str());
 
     sensor_t * s = esp_camera_sensor_get();
+    if(s == NULL){
+        request->send(501);
+        return;
+    }
 
 
     int res = 0;
-
     if(!strcmp(variable, "framesize")) res = s->set_framesize(s, (framesize_t)val);
     else if(!strcmp(variable, "quality")) res = s->set_quality(s, val);
     else if(!strcmp(variable, "contrast")) res = s->set_contrast(s, val);
@@ -375,7 +382,7 @@ void setCameraVar(AsyncWebServerRequest *request){
         request->send(404);
         return;
     }
-    log_d("Got setting %s with value %d", var.c_str(), val);
+    log_d("Got setting %s with value %d. Res: %d", var.c_str(), val, res);
 
     AsyncWebServerResponse * response = request->beginResponse(200);
     response->addHeader("Access-Control-Allow-Origin", "*");
