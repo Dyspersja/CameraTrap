@@ -16,6 +16,20 @@ The picture below illustrates the real system setup on a breadboard.
 
 ![system](https://github.com/Dyspersja/CameraTrap/assets/146620220/ea7a1eb2-3133-4f78-b81c-57b5ea0341fa)
 
+## Live View
+Below is a demonstration of live video streaming and viewing it in a web browser at **/stream**.
+
+![stream](https://github.com/Dyspersja/CameraTrap/assets/146620220/cf7a3a91-a1b2-4a3f-a9de-00f4efcd2bb1)
+
+## List of Photos
+A demonstration of the list of photos taken by the camera and saved on the microSD card at **/view**.
+
+![photolist](https://github.com/Dyspersja/CameraTrap/assets/146620220/d5c540e5-979a-4881-98e3-0b6c0e868fe0)
+
+## Motion Detection
+When motion is detected by the PIR sensor, a photo is automatically taken.
+
+![PIR](https://github.com/Dyspersja/CameraTrap/assets/146620220/ab5ae56d-8a8a-45d0-885a-23ee73589ce6)
 
 ## Special thanks
 Special thanks to the [me-no-dev](https://github.com/me-no-dev).  
