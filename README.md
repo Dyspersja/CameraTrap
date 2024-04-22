@@ -12,6 +12,11 @@ The functionalities of the project include:
 5. **Photo Preview:** The system enables user to select a specific photo from the list and view its preview in full resolution.
 6. **Real-time Camera Stream:** Users can remotely access and stream live camera footage.
 
+The picture below illustrates the real system setup on a breadboard.
+
+![system](https://github.com/Dyspersja/CameraTrap/assets/146620220/ea7a1eb2-3133-4f78-b81c-57b5ea0341fa)
+
+
 ## Special thanks
 Special thanks to the [me-no-dev](https://github.com/me-no-dev).  
 Thanks to his code from one of his GitHub gists, I was able to add functionality to the application for streaming live view from the camera.
